@@ -1,0 +1,17 @@
+
+main {
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 10px;
+}
+
+.card-img-top{
+  height: 285px;
+  width: 285px;
+  border: 1px solid black;
+}
