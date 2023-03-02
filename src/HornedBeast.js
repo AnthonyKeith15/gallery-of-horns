@@ -16,19 +16,24 @@ class HornedBeast extends React.Component{
     })
   }
 
+  handleImgClick = () => {
+    this.props.handleOpenModal(this.props.src, this.props.title);
+  }
+
   render() {
     return (
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" 
+      <Card.Img variant="top"
       src={this.props.src} 
       alt={this.props.alt}
-      onClick={this.handleFavorites}/>
+      onClick={this.handleImgClick}
+      />
       <Card.Body>
         <Card.Title>{this.props.title}</Card.Title>
         <Card.Text>
           {this.props.description}
         </Card.Text>
-        <Card.Text>
+        <Card.Text onClick={this.handleFavorites}>
         ❤️ {this.state.favorites}
         </Card.Text>
       </Card.Body>
