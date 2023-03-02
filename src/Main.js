@@ -3,24 +3,25 @@ import HornedBeast from "./HornedBeast";
 
 class Main extends React.Component {
   render() {
-    let beasts = [];
-    this.props.data.forEach((beast, idx) => {
-      beasts.push(
-        <HornedBeast
-          title={beast.title}
-          src={beast.image_url}
-          alt={beast.keyword}
-          description={beast.description}
-          key={idx}
-        />
+    let beasts = this.props.data.map((beast, idx) => {
+      return (
+      <HornedBeast
+        title={beast.title}
+        src={beast.image_url}
+        alt={beast.keyword}
+        description={beast.description}
+        key={idx}
+        handleOpenModal={this.props.handleOpenModal}
+      />
       )
-    });
-    return (
+    })
+
+  return(
       <main>
-        {beasts}
-      </main>
+  { beasts }
+      </main >
       )
-  }
+  };
 }
 
 export default Main;

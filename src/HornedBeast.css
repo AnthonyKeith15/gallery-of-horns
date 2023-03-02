@@ -8,10 +8,24 @@ main {
 
 .card {
   margin: 10px;
+  width: 18rem;
 }
 
 .card-img-top{
   height: 285px;
   width: 285px;
   border: 1px solid black;
+}
+
+.modal-body img{
+  width: 100%;
+  height: 100%;
+}
+
+.modal-header h2{
+  margin: auto;
+}
+
+.card-text:last-child:hover {
+  cursor: pointer;
 }
