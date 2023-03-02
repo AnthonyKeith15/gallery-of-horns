@@ -19,11 +19,12 @@ class App extends React.Component {
     });
   }
 
-  handleOpenModal = (src, title) => {
+  handleOpenModal = (src, title, alt) => {
     this.setState({
       isModalOpen: true,
       src: src,
-      title: title
+      title: title,
+      alt: alt
     });
   }
   render() {
@@ -38,7 +39,7 @@ class App extends React.Component {
       onHide={this.handleCloseModal}>
         <Modal.Header><h2>{this.state.title}</h2></Modal.Header>
         <Modal.Body>
-          <img src={this.state.src}/>
+          <img src={this.state.src} alt={this.state.alt}/>
         </Modal.Body>
       </Modal>
       </>
