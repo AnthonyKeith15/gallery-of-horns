@@ -4,8 +4,10 @@ import Main from "./Main";
 import Footer from "./Footer";
 import data from "./data.json"
 import Modal from 'react-bootstrap/Modal'
+
+
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       isModalOpen: false,
@@ -30,18 +32,18 @@ class App extends React.Component {
   render() {
     return (
       <>
-      <Header/>
-      <Main data={data}
-      handleOpenModal={this.handleOpenModal}/>
-      <Footer/>
-      <Modal
-      show={this.state.isModalOpen}
-      onHide={this.handleCloseModal}>
-        <Modal.Header><h2>{this.state.title}</h2></Modal.Header>
-        <Modal.Body>
-          <img src={this.state.src} alt={this.state.alt}/>
-        </Modal.Body>
-      </Modal>
+        <Header />
+        <Main data={data}
+          handleOpenModal={this.handleOpenModal} />
+        <Footer />
+        <Modal
+          show={this.state.isModalOpen}
+          onHide={this.handleCloseModal}>
+          <Modal.Header><h2>{this.state.title}</h2></Modal.Header>
+          <Modal.Body>
+            <img src={this.state.src} alt={this.state.alt} />
+          </Modal.Body>
+        </Modal>
       </>
     )
   }
