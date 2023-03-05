@@ -21,6 +21,7 @@ class Main extends React.Component {
 
   handleFilterData = (event) => {
     event.preventDefault();
+    // eslint-disable-next-line
     let filteredData = this.props.data.filter((beast) => {
       if(this.state.sortingFilter === 'all'){
         return beast
